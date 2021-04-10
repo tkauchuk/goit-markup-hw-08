@@ -1,0 +1,30 @@
+.social-links-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    @include centeredFlex();
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--primary-bgc);
+
+    @include primaryTransition(background-color);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: var(--accent-color);
+  }
+  &__icon {
+    fill: #afb1b8;
+
+    @include primaryTransition(fill);
+
+    .social-links-list__link:hover &,
+    .social-links-list__link:focus & {
+      fill: var(--primary-bgc);
+    }
+  }
+}

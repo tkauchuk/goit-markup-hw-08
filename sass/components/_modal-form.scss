@@ -1,0 +1,104 @@
+.modal-form {
+  display: flex;
+  flex-direction: column;
+
+  &__field {
+    margin-bottom: 10px;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--secondary-font-color);
+  }
+
+  &__input-wrapper {
+    position: relative;
+    display: block;
+    margin-top: 4px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+
+    @include primaryTransition(border-color);
+  }
+  &__input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    @include primaryTransition(fill);
+
+    .modal-form__input:focus + & {
+      fill: var(--accent-color);
+    }
+  }
+  &__comment {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    margin-top: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+
+    @include primaryTransition(border-color);
+  }
+  &__comment:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+  &__comment::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &__check-desc {
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--secondary-font-color);
+  }
+  &__check-desc::before {
+    display: block;
+    content: '';
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    background-image: url(../images/checkbox.svg);
+    background-color: #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+
+    .modal-form__term-agreement:checked + & {
+      background: #2196f3;
+      background-image: url(../images/icon-checked.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-radius: 2px;
+    }
+    .modal-form__term-agreement:focus + & {
+      box-shadow: 0 0 0 2px greenyellow;
+    }
+  }
+  &__term-link {
+    color: var(--accent-color);
+    text-decoration: underline;
+  }
+  &__btn {
+    padding: 10px 55px;
+    align-self: center;
+    margin-top: 30px;
+  }
+}

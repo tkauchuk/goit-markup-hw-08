@@ -1,0 +1,38 @@
+.about-us {
+  padding-bottom: 47px;
+}
+.about-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__icon-wrapper {
+    @include centeredFlex();
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: #f5f4fa;
+    border-radius: 4px;
+  }
+  &__title {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-font-color);
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--secondary-font-color);
+  }
+}
