@@ -1,0 +1,14 @@
+.burger-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+.burger-btn:hover,
+.burger-btn:focus {
+  fill: var(--accent-color);
+}

@@ -1,30 +1,94 @@
 .hero {
+  margin: 0 auto;
   text-align: center;
-  max-width: 1600px;
+  max-width: 480px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero-bg-mg.jpg);
+    url(../images/mobile-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--hero-bgc);
+}
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/mobile-hero@2x.jpg);
+  }
+}
 
-  &__container {
+.hero__container {
+  padding: 118px 60px;
+}
+
+.hero__container-title {
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--extra-font-color);
+}
+
+.hero__btn {
+  padding: 10px 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    background-image: url(../images/tablet-hero.jpg);
+  }
+  .hero__container {
+    padding: 118px 204px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/tablet-hero@2x.jpg);
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/desktop-hero.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/desktop-hero@2x.jpg);
+    }
+  }
+  .hero__container {
     padding: 200px 252px;
   }
-
-  &__container-title {
-    margin-bottom: 30px;
-    font-weight: 900;
+  .hero__container-title {
     font-size: 44px;
     line-height: 1.36;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--extra-font-color);
-  }
-
-  &__btn {
-    padding: 10px 32px;
   }
 }
