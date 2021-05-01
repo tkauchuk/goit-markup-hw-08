@@ -952,11 +952,20 @@ body {
 .clients-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.clients-list__item {
-  flex-basis: calc(100% / 2 - 30px);
+.clients-list__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .clients-list {
+    justify-content: space-between;
+  }
+  .clients-list__item {
+    flex-basis: calc(100% / 2 - 30px);
+  }
 }
 
 @media screen and (max-width: 767px) {
